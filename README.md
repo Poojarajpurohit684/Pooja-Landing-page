@@ -1,4 +1,4 @@
-🌐 Pooja Portfolio Hub
+🌐 Pooja-Landing-page
 A modern and responsive personal landing page built using HTML, CSS, and JavaScript.
 Showcasing my skills, projects, certificates, and contact details in a clean and interactive design.
 
