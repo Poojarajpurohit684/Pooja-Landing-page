@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Survey Form</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Style */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Form Container */
+        .survey-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            max-width: 100%;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .survey-form:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #f3e5f5;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-size: 1rem;
+            color: #f8f9fa;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border: 2px solid #7b42f6;
+            background-color: #f0f8ff;
+        }
+
+        /* Button Style */
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            background: #8a2be2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #5f27cd;
+        }
+
+        /* Tooltip Effect */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 4px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Footer Style */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f3e5f5;
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .survey-form {
+                width: 100%;
+                padding: 15px;
+                box-shadow: none;
+                border-radius: 6px;
+            }
+
+            label {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .submit-btn {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="survey-form">
+    <h2>AI Survey Form</h2>
+
+    <form action="#" method="post">
+        <label for="name">Name <span class="tooltip"><span class="tooltip-text">Enter your full name</span></span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email <span class="tooltip"><span class="tooltip-text">We will keep your email confidential</span></span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age-group">Age Group</label>
+        <select name="age-group" id="age-group" required>
+            <option value="under_18">Under 18</option>
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+            <option value="46_above">Above 46</option>
+        </select>
+
+        <label for="occupation">Which option best describes you?</label>
+        <select name="occupation" id="occupation" required>
+            <option value="student">Student</option>
+            <option value="working_professional">Working Professional</option>
+            <option value="retired">Retired</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label>How would you rate your knowledge of AI?</label>
+        <label><input type="radio" name="knowledge" value="none" required> No knowledge</label>
+        <label><input type="radio" name="knowledge" value="basic"> Basic understanding</label>
+        <label><input type="radio" name="knowledge" value="intermediate"> Intermediate understanding</label>
+        <label><input type="radio" name="knowledge" value="advanced"> Advanced understanding</label>
+
+        <label>Do you think AI will have a positive impact on society?</label>
+        <label><input type="radio" id="impact-yes" name="impact" value="yes" required> Yes</label>
+        <label><input type="radio" id="impact-no" name="impact" value="no"> No</label>
+
+        <label for="feedback">What do you think about AI in general?</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="Share your thoughts..." required></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<footer>
+    <a href="Landing_Home.html">&larr; Back</a>
+</footer>
+
+</body>
+</html>
